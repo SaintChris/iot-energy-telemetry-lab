@@ -24,7 +24,7 @@ future: time-series DB + dashboard + alerting
 - device identity
 - timestamps and sequence numbers
 - MQTT topic design
-- connection/retry behavior
+- MQTT publish/subscribe behavior
 - JSON validation
 - offline-safe synthetic testing
 - separation of simulated and production data
@@ -53,3 +53,5 @@ python -m src.subscriber
 ## Safety boundary
 
 All readings are synthetic. No IREE/customer site identifiers, credentials, inverter endpoints, or production telemetry are used.
+
+This is a learning lab, not a production broker configuration. The included local Mosquitto setup uses anonymous access and does not implement production authentication, TLS, reconnect backoff, fleet provisioning, or device-certificate management.
